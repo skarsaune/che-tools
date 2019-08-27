@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-#
-# Requires https://github.com/ernoaapa/kubectl-warp
-#
+# Simple sync script only using kubectl , be aware that this is a very limited script
+# Ideally sync all your changes between different environments using git
 
 if [ $? -ne 0 ]
 then
@@ -15,7 +14,7 @@ WKS_POD=`kubectl get pods --all-namespaces |grep workspace|head -1| awk '{print 
 #Initially fetch project from pod into the folder of this script
 echo fetching all files from che
 kubectl cp $WKS_POD:/projects projects -c tools
-touch lastSynced 
+touch lastSynced
 #Start syncing back
 echo "Pushing detected changes back to che, press ^C to abort"
 while true
@@ -29,4 +28,3 @@ do
     touch lastSynced
 done
 
-	
