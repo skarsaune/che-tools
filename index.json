@@ -1,0 +1,146 @@
+[
+{
+  "displayName":"NodeJS Angular Web Application",
+  "description":"Stack for developing NodeJS Angular Web Application",
+  "tags":["NodeJS","Angular","Alpine"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2686Mi",
+  "links": {"self":"/devfiles/angular/devfile.yaml" }
+}
+,{
+  "displayName":"Apache Camel based on Spring Boot",
+  "description":"Stack with environment ready to develop Integration projects with Apache Camel based on Spring Boot.",
+  "tags":["Java","OpenJDK","Maven","Debian","Apache Camel","Red Hat Fuse","Spring Boot"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2930Mi",
+  "links": {"self":"/devfiles/apache-camel-springboot/devfile.yaml" }
+}
+,{
+  "displayName":".NET Core",
+  "description":"Stack with .Net 2.2",
+  "tags":["Debian","Dotnet","C#"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2710Mi",
+  "links": {"self":"/devfiles/dotnet/devfile.yaml" }
+}
+,{
+  "displayName":"Go",
+  "description":"Stack with Go 1.10.7",
+  "tags":["Debian","Go"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"1686Mi",
+  "links": {"self":"/devfiles/go/devfile.yaml" }
+}
+,{
+  "displayName":"Java Gradle",
+  "description":"Java Stack with OpenJDK 11 and Gradle 5.2.1",
+  "tags":["Java","OpenJDK","Gradle","Ubuntu"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2674Mi",
+  "links": {"self":"/devfiles/java-gradle/devfile.yaml" }
+}
+,{
+  "displayName":"Java Maven",
+  "description":"Java Stack with OpenJDK 11 and Maven 3.6.0",
+  "tags":["Java","OpenJDK","Maven","Debian"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2674Mi",
+  "links": {"self":"/devfiles/java-maven/devfile.yaml" }
+}
+,{
+  "displayName":"Java with Spring Boot and MySQL",
+  "description":"Java stack with OpenJDK 8, MySQL and Spring Boot Petclinic demo application",
+  "tags":["Java","OpenJDK","Maven","Spring Boot","MySQL"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"3072Mi",
+  "links": {"self":"/devfiles/java-mysql/devfile.yaml" }
+}
+,{
+  "displayName":"Java Spring Boot",
+  "description":"Java stack with OpenJDK 8 and Spring Boot Petclinic demo application",
+  "tags":["Java","OpenJDK","Maven","Spring Boot"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"3072Mi",
+  "links": {"self":"/devfiles/java-web-spring/devfile.yaml" }
+}
+,{
+  "displayName":"Java Vert.x",
+  "description":"Java stack with OpenJDK 8 and Vert.x demo application",
+  "tags":["Java","OpenJDK","Maven","Vertx"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2674Mi",
+  "links": {"self":"/devfiles/java-web-vertx/devfile.yaml" }
+}
+,{
+  "displayName":"NodeJS Express Web Application",
+  "description":"Stack with NodeJS 10",
+  "tags":["NodeJS","Express","ubi8"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"1686Mi",
+  "links": {"self":"/devfiles/nodejs/devfile.yaml" }
+}
+,{
+  "displayName":"NodeJS MongoDB Web Application",
+  "description":"Stack with NodeJS 10 and MongoDB 3.4",
+  "tags":["NodeJS","Express","MongoDB","RealWorld","ubi8","Centos"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"1686Mi",
+  "links": {"self":"/devfiles/nodejs-mongo/devfile.yaml" }
+}
+,{
+  "displayName":"NodeJS React Web Application",
+  "description":"Stack for developing NodeJS React Web Application",
+  "tags":["NodeJS","React","Redux","RealWorld"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"1686Mi",
+  "links": {"self":"/devfiles/nodejs-react/devfile.yaml" }
+}
+,{
+  "displayName":"PHP Laravel with MySQL",
+  "description":"PHP Stack with Laravel and MySQL real world application",
+  "tags":["PHP","Apache","MySQL","Centos","Debian"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2686Mi",
+  "links": {"self":"/devfiles/php-laravel/devfile.yaml" }
+}
+,{
+  "displayName":"PHP with MySQL",
+  "description":"PHP Stack with MySQL and simple database application",
+  "tags":["PHP","Apache","MySQL","Debian","Centos"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2686Mi",
+  "links": {"self":"/devfiles/php-mysql/devfile.yaml" }
+}
+,{
+  "displayName":"PHP Symfony",
+  "description":"PHP Stack with Symfony Demo Application https://symfony.com/",
+  "tags":["PHP","Apache","MySQL","Symfony","Debian","Centos"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2686Mi",
+  "links": {"self":"/devfiles/php-symfony/devfile.yaml" }
+}
+,{
+  "displayName":"PHP Simple",
+  "description":"PHP Stack with PHP 7.1 and simple web application",
+  "tags":["PHP","Apache","Debian"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"2430Mi",
+  "links": {"self":"/devfiles/php-web-simple/devfile.yaml" }
+}
+,{
+  "displayName":"Python",
+  "description":"Stack with Python 3.6",
+  "tags":["Centos","Python","pip"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"1686Mi",
+  "links": {"self":"/devfiles/python/devfile.yaml" }
+}
+,{
+  "displayName":"Django",
+  "description":"Stack with Python 3.6 and Django",
+  "tags":["Centos","Python","pip"],
+  "icon":"https://www.eclipse.org/che/images/logo-eclipseche.svg",
+  "globalMemoryLimit":"1686Mi",
+  "links": {"self":"/devfiles/python-django/devfile.yaml" }
+}
+]

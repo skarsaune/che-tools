@@ -1,0 +1,5 @@
+displayName: JavaZone 2019
+description: Java stack with OpenJDK 8, MySQL and demo apps for JavaZone 2019
+tags: ["Java", "OpenJDK", "Maven", "Spring Boot", "MySQL"]
+icon: https://2019.javazone.no/logo-sharp.svg
+globalMemoryLimit: 3072Mi
