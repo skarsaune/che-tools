@@ -32,26 +32,7 @@ components:
         name: JAVA_OPTS
       - value: $(JAVA_OPTS)
         name: MAVEN_OPTS
-  - mountSources: true
-    endpoints:
-      - name: db
-        attributes:
-          discoverable: 'true'
-          public: 'false'
-        port: 3306
-    memoryLimit: 300Mi
-    type: dockerimage
-    alias: mysql
-    image: centos/mysql-57-centos7
-    env:
-      - value: petclinic
-        name: MYSQL_USER
-      - value: password
-        name: MYSQL_PASSWORD
-      - value: petclinic
-        name: MYSQL_DATABASE
-      - value: '$(echo ${0})\\$'
-        name: PS1
+
   - id: redhat/vscode-yaml/0.4.0
     type: chePlugin
   - id: ms-kubernetes-tools/vscode-kubernetes-tools/1.0.0
@@ -84,16 +65,6 @@ commands:
 
           target/*.jar
         component: tools
-  - name: prepare database
-    actions:
-      - type: exec
-        command: >
-          /opt/rh/rh-mysql57/root/usr/bin/mysql -u root <
-          ${CHE_PROJECTS_ROOT}/web-java-spring-petclinic/src/main/resources/db/mysql/schema.sql
-          &&
-
-          echo -e "\e[32mDone.\e[0m Database petclinic was configured!"
-        component: mysql
   - name: Debug remote java application
     actions:
       - referenceContent: |
