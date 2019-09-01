@@ -3,13 +3,12 @@
 # Simple sync script only using kubectl , be aware that this is a very limited script
 # Ideally sync all your changes between different environments using git
 
-if [ $? -ne 0 ]
+WKS_POD=`kubectl get pods --all-namespaces |grep workspace|head -1| awk '{print $1"/"$2}'`
+
+if [ "$WKS_POD" = "" ]
 then
     echo "Could not find any workspace pod with kubectl" && exit 2
 fi
-
-WKS_POD=`kubectl get pods --all-namespaces |grep workspace|head -1| awk '{print $1"/"$2}'`
-
 
 #Initially fetch project from pod into the folder of this script
 echo fetching all files from che
