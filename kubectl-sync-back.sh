@@ -19,6 +19,7 @@ echo "Pushing detected changes back to che, press ^C to abort"
 while true
 do
     sleep 3s;
+    echo -n .
     for updatedFile in $(find projects -type f -Bnewer lastSynced | grep -v '/target/')
     do
 	echo syncing $updatedFile to che
