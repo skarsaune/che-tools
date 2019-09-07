@@ -1,14 +1,14 @@
 metadata:
-  name: pet-clinic
+  name: pet-store
 projects:
-  - name: web-java-spring-petclinic
+  - name: java-web-spring
     source:
-      location: 'https://github.com/spring-projects/spring-petclinic.git'
+      location: https://github.com/spring-projects/spring-petclinic.git
       type: git
       branch: master
   - name: che-tools
     source:
-      location: 'https://github.com/skarsaune/che-tools.git'
+      location: https://github.com/skarsaune/che-tools.git
       type: git
       branch: master
 components:
@@ -16,13 +16,13 @@ components:
     endpoints:
       - name: 8080/tcp
         port: 8080
-    memoryLimit: 700Mi
+    memoryLimit: 768Mi
     type: dockerimage
     volumes:
       - name: m2
         containerPath: /home/user/.m2
     alias: tools
-    image: 'quay.io/eclipse/che-java8-maven:nightly'
+    image: quay.io/eclipse/che-java8-maven:7.1.0
     env:
       - value: >-
           -XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
@@ -32,36 +32,31 @@ components:
         name: JAVA_OPTS
       - value: $(JAVA_OPTS)
         name: MAVEN_OPTS
-
-  - id: redhat/vscode-yaml/0.4.0
+  - id: redhat/java/0.46.0
     type: chePlugin
   - id: ms-kubernetes-tools/vscode-kubernetes-tools/1.0.0
     type: chePlugin
-  - id: redhat/java/0.46.0
+  - id: redhat/vscode-yaml/0.4.0
     type: chePlugin
+  - id: eclipse/che-machine-exec-plugin/7.0.0
+    type: chePlugin
+  - id: eclipse/che-theia/7.0.0
+    type: cheEditor
 apiVersion: 1.0.0
 commands:
   - name: maven build
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/web-java-spring-petclinic'
+      - workdir: /java-web-spring
         type: exec
         command: mvn clean install
         component: tools
   - name: run webapp
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/web-java-spring-petclinic'
+      - workdir: /java-web-spring
         type: exec
         command: >
-          SPRING_DATASOURCE_URL=jdbc:mysql://db/petclinic \
-
-          SPRING_DATASOURCE_USERNAME=petclinic \
-
-          SPRING_DATASOURCE_PASSWORD=password \
-
-          java -jar -Dspring.profiles.active=mysql \
-
-          -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
-          \
+          java -jar -Xdebug
+          -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 \
 
           target/*.jar
         component: tools
@@ -80,3 +75,4 @@ commands:
             }]
           }
         type: vscode-launch
+

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-kubectl cp index.json che/devfile-registry-74cbd5d77c-p2jkc:/var/www/html/devfiles/index.json
+DEV_REG=$(kubectl get pods --all-namespaces |grep devfile-registry|awk '{print $1"/"$2}')
+kubectl cp index.json $DEV_REG:/var/www/html/devfiles/index.json
