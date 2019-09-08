@@ -46,13 +46,13 @@ apiVersion: 1.0.0
 commands:
   - name: maven build
     actions:
-      - workdir: /java-web-spring
+      - workdir: '${CHE_PROJECTS_ROOT}/java-web-spring'
         type: exec
         command: mvn clean install
         component: tools
   - name: run webapp
     actions:
-      - workdir: /java-web-spring
+      - workdir: '${CHE_PROJECTS_ROOT}/java-web-spring'
         type: exec
         command: >
           java -jar -Xdebug
